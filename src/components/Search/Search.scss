@@ -1,0 +1,38 @@
+.search_container {
+    background-color: var(--comment-backgroud);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 50px;
+    width: 250px;
+    .icon_search {
+        margin: 0 5px;
+        svg path {
+            fill: var(--secondary-icon);
+        }
+    }
+    input {
+        width: 100%;
+        font-size: var(--fourteen-px);
+        border: none;
+        outline: none;
+        background-color: transparent;
+        color: var(--primary-text);
+        font-weight: var(--third-font-weight);
+        &::placeholder {
+            color: var(--primary-text);
+            font-weight: var(--secon-font-weight);
+            font-size: var(--fourteen-px);
+        }
+    }
+    .camera_comment,
+    .send_comment {
+        color: var(--secondary-icon);
+        font-size: 16px;
+        margin-left: 10px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

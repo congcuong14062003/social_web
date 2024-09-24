@@ -1,0 +1,25 @@
+.container_item {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    border-radius: 5px;
+    padding: 8px;
+    .icon_item {
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+    &:hover {
+        background-color: var(--hover-item);
+    }
+    &.active {
+        background-color: var(--hover-item);
+    }
+    .title_item {
+        margin-left: 5px;
+        color: var(--primary-text);
+        font-size: var(--fourteen-px);
+        font-weight: var(--secon-font-weight);
+    }
+}

@@ -1,0 +1,155 @@
+.messenger_container {
+    height: 100%;
+    position: relative;
+    background-color: var(--card-background);
+    display: flex;
+    .left_messenger {
+        width: 360px;
+        height: 100%;
+        border-right: 1px solid var(--border-color);
+        .popover_container {
+            height: 100%;
+            max-height: 100%;
+            .body_popover {
+                height: 89%;
+                padding-right: 0px;
+                .chat_container {
+                    height: 100%;
+                    overflow: auto;
+                }
+            }
+        }
+    }
+    .center_messenger {
+        height: 100%;
+        overflow-y: hidden;
+        flex: 1;
+        border-right: 1px solid var(--border-color);
+        .messages_container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            .chat_header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 6px 10px;
+                box-shadow: 0 0px 0px 0 var(--box-shadow1), 0 0px 8px 0 var(--box-shadow2);
+                border-bottom: 1px solid var(--comment-backgroud);
+                .friend_item {
+                    padding: 6px 10px;
+                    .name_friend {
+                        font-size: var(--sixteen-px);
+                    }
+                }
+                .action_call {
+                    display: flex;
+                    align-items: center;
+                    .action_chat {
+                        width: 36px;
+                        display: flex;
+                        margin: 0 5px;
+                        align-items: center;
+                        justify-content: center;
+                        height: 36px;
+                        border-radius: 50%;
+                        color: var(--primary-color);
+                        svg path {
+                            fill: var(--primary-color);
+                        }
+                        &:hover {
+                            cursor: pointer;
+                            background-color: var(--secondary-button);
+                        }
+                    }
+                }
+            }
+            .chat_body {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                overflow: auto; /* Cho phép cuộn */
+                .chat_main_infor {
+                    flex: 1; /* Chiếm toàn bộ không gian còn lại */
+                    padding: 20px;
+                    overflow-y: auto; /* Cho phép cuộn theo chiều dọc */
+                }
+            }
+            .chat_footer {
+                box-shadow: 0 2px 4px 0 var(--box-shadow1), 0 2px 15px 0 var(--box-shadow2);
+                border-top: 1px solid var(--comment-backgroud);
+                padding: 8px 10px;
+                display: flex;
+                align-items: center;
+                .send_file_input,
+                .send_mesage_action,
+                .like_message_action {
+                    width: 36px;
+                    height: 36px;
+                    display: flex;
+                    border-radius: 50%;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: var(--secondary-button);
+                    }
+                }
+                .hidden {
+                    display: none;
+                }
+                .search_container {
+                    flex: 1;
+                    margin-right: 10px;
+                }
+                .send_mesage_action {
+                }
+            }
+        }
+    }
+    .right_messenger {
+        width: 360px;
+        height: 100%;
+    }
+}
+
+/* style.css */
+.container_input_code {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    align-items: center;
+    .input_code_chat {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .button_container_code {
+        margin-top: 20px;
+    }
+    .input {
+        width: 40px;
+        border: none;
+        border-bottom: 3px solid rgba(0, 0, 0, 0.5);
+        margin: 0 10px;
+        text-align: center;
+        font-size: 36px;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+
+    .input:focus {
+        border-bottom: 3px solid orange;
+        outline: none;
+    }
+
+    .input:nth-child(1) {
+        cursor: pointer;
+        pointer-events: all;
+    }
+}

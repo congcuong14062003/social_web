@@ -1,0 +1,15 @@
+.close_modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: var(--secondary-button);
+    svg {
+        font-size: 25px;
+    }
+    svg path {
+        fill: var(--secondary-icon);
+    }
+}
